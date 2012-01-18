@@ -21,7 +21,7 @@ to Github by `Leth`
 Installation
 ============
 
-  1. Add this bundle to your prject's deps:
+  1. Add these repositories to your project's deps:
 
           [registered-domains-php]
               git=https://github.com/leth/registered-domains-php.git
@@ -59,7 +59,8 @@ Installation
 Usage
 =====
 
-Download and update public suffix list:
+Download and update public suffix list. This command `publicsuffix:update`
+creates/updates config file located at `Resources/config/tlds.xml`:
 
           $ php app/console publicsuffix:update
 
