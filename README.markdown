@@ -15,7 +15,7 @@ An excerpt from publicsuffix.org:
     a community resource. It is available for use in any software, but was 
     originally created to meet the needs of browser manufacturers.
 
-This Bundle depends on the php library of dkim-reputation.org. It's uploaded
+This Bundle depends on the php library of dkim-reputation.org. It is uploaded
 to Github by `Leth`
 
 Installation
@@ -73,5 +73,4 @@ Get service and parse URL:
           print $ps->getHost();
           print $ps->getDomain();
           print $ps->getSubdomain();
-
-
+          print $ps->getTld();
