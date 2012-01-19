@@ -25,5 +25,6 @@ class PublicSuffixTest extends WebTestCase
         $this->assertEquals('www.test.domain.org.uk', $ps->getHost());
         $this->assertEquals('domain.org.uk', $ps->getDomain());
         $this->assertEquals('www.test', $ps->getSubdomain());
+        $this->assertEquals('org.uk', $ps->getTld());
     }
 }

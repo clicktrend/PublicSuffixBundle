@@ -26,10 +26,11 @@ class PublicSuffix {
         $this->host = $parts['host'];
         $this->domain = $this->getRegisteredDomain($this->host);
         $this->subdomain = substr($this->host, 0, strlen($this->host) - strlen($this->domain) - 1);
+        $this->tld = substr($this->domain, strpos($this->domain, '.') + 1);
         
     }
     
-    public function getRegisteredDomain($signingDomain = NULL) {
+    protected function getRegisteredDomain($signingDomain = NULL) {
         if(!function_exists('getRegisteredDomain'))
             throw new \RuntimeException('PublicSuffix lib not found. Check your configuration ');
         else if($signingDomain == NULL) 
@@ -52,5 +53,9 @@ class PublicSuffix {
     
     public function getSubdomain() {
         return $this->subdomain;
+    }
+    
+    public function getTld() {
+        return $this->tld;
     }  
 }
